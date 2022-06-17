@@ -21,6 +21,9 @@ public class latihan3 {
         
         Lingkaran ring = lt.new Lingkaran();
         ring.luas_keliling_lingkaran();
+
+        Segitiga S3 = lt.new Segitiga();
+        S3.luas_keliling_segitiga();
         
     }
     
@@ -47,6 +50,48 @@ public class latihan3 {
             System.out.println("-------------------");
         }
         
+    }
+
+    class Segitiga{
+        Scanner input = new Scanner(System.in);
+        int pilihan = 0;
+        int keliling, alas, tinggi, miring;
+        double luas;
+        
+        void luas_keliling_segitiga(){
+
+
+            System.out.println("\nHitung Segitiga");
+            System.out.println("Luas : 1");
+            System.out.print("Keliling : 2");
+            System.out.print("\nSilakan masukan angka dari pilihan diatas : ");
+            pilihan = input.nextInt();
+
+            if(pilihan== 1){
+                System.out.print("Masukan Alas : ");
+                alas=input.nextInt();
+                System.out.print("Masukan Tinggi : ");
+                tinggi=input.nextInt();
+
+                luas = 0.5 * alas * tinggi;
+                System.out.println("Hasil Luas " + luas);
+            }
+
+            else if (pilihan == 2){
+                System.out.print("Masukan Alas : ");
+                alas=input.nextInt();
+                System.out.print("Masukan Tinggi : ");
+                tinggi=input.nextInt();
+                System.out.print("Masukan Miring : ");
+                miring=input.nextInt();
+
+                keliling = alas + tinggi + miring;
+                System.out.println("Hasil keliling " + keliling);
+            }
+            
+
+            
+        }
     }
 
     class Lingkaran{
